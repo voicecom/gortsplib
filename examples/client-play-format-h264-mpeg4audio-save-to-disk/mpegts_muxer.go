@@ -5,7 +5,7 @@ import (
 	"os"
 	"sync"
 
-	"github.com/bluenviron/gortsplib/v4/pkg/format"
+	"github.com/voicecom/gortsplib/v4/pkg/format"
 	"github.com/bluenviron/mediacommon/pkg/codecs/h264"
 	"github.com/bluenviron/mediacommon/pkg/formats/mpegts"
 )

@@ -3,9 +3,9 @@ package main
 import (
 	"log"
 
-	"github.com/bluenviron/gortsplib/v4"
-	"github.com/bluenviron/gortsplib/v4/pkg/base"
-	"github.com/bluenviron/gortsplib/v4/pkg/format"
+	"github.com/voicecom/gortsplib/v4"
+	"github.com/voicecom/gortsplib/v4/pkg/base"
+	"github.com/voicecom/gortsplib/v4/pkg/format"
 	"github.com/bluenviron/mediacommon/pkg/formats/mpegts"
 	"github.com/pion/rtp"
 )

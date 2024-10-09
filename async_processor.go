@@ -1,7 +1,7 @@
 package gortsplib
 
 import (
-	"github.com/bluenviron/gortsplib/v4/pkg/ringbuffer"
+	"github.com/voicecom/gortsplib/v4/pkg/ringbuffer"
 )
 
 // this struct contains a queue that allows to detach the routine that is reading a stream

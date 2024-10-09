@@ -3,7 +3,7 @@ package gortsplib
 import (
 	"net"
 
-	"github.com/bluenviron/gortsplib/v4/pkg/liberrors"
+	"github.com/voicecom/gortsplib/v4/pkg/liberrors"
 )
 
 type serverMulticastWriter struct {

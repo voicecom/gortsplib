@@ -3,8 +3,8 @@ package auth
 import (
 	"fmt"
 
-	"github.com/bluenviron/gortsplib/v4/pkg/base"
-	"github.com/bluenviron/gortsplib/v4/pkg/headers"
+	"github.com/voicecom/gortsplib/v4/pkg/base"
+	"github.com/voicecom/gortsplib/v4/pkg/headers"
 )
 
 // Sender allows to send credentials.

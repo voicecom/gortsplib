@@ -12,8 +12,8 @@ import (
 
 	psdp "github.com/pion/sdp/v3"
 
-	"github.com/bluenviron/gortsplib/v4/pkg/base"
-	"github.com/bluenviron/gortsplib/v4/pkg/format"
+	"github.com/voicecom/gortsplib/v4/pkg/base"
+	"github.com/voicecom/gortsplib/v4/pkg/format"
 )
 
 var (

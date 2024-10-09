@@ -3,7 +3,7 @@ package auth
 import (
 	"testing"
 
-	"github.com/bluenviron/gortsplib/v4/pkg/base"
+	"github.com/voicecom/gortsplib/v4/pkg/base"
 	"github.com/stretchr/testify/require"
 )
 

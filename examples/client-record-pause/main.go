@@ -5,9 +5,9 @@ import (
 	"net"
 	"time"
 
-	"github.com/bluenviron/gortsplib/v4"
-	"github.com/bluenviron/gortsplib/v4/pkg/description"
-	"github.com/bluenviron/gortsplib/v4/pkg/format"
+	"github.com/voicecom/gortsplib/v4"
+	"github.com/voicecom/gortsplib/v4/pkg/description"
+	"github.com/voicecom/gortsplib/v4/pkg/format"
 	"github.com/pion/rtp"
 )
 

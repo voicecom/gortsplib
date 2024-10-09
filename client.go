@@ -1,7 +1,7 @@
 /*
 Package gortsplib is a RTSP 1.0 library for the Go programming language.
 
-Examples are available at https://github.com/bluenviron/gortsplib/tree/main/examples
+Examples are available at https://github.com/voicecom/gortsplib/tree/main/examples
 */
 package gortsplib
 
@@ -19,16 +19,16 @@ import (
 	"github.com/pion/rtcp"
 	"github.com/pion/rtp"
 
-	"github.com/bluenviron/gortsplib/v4/pkg/auth"
-	"github.com/bluenviron/gortsplib/v4/pkg/base"
-	"github.com/bluenviron/gortsplib/v4/pkg/bytecounter"
-	"github.com/bluenviron/gortsplib/v4/pkg/conn"
-	"github.com/bluenviron/gortsplib/v4/pkg/description"
-	"github.com/bluenviron/gortsplib/v4/pkg/format"
-	"github.com/bluenviron/gortsplib/v4/pkg/headers"
-	"github.com/bluenviron/gortsplib/v4/pkg/liberrors"
-	"github.com/bluenviron/gortsplib/v4/pkg/rtptime"
-	"github.com/bluenviron/gortsplib/v4/pkg/sdp"
+	"github.com/voicecom/gortsplib/v4/pkg/auth"
+	"github.com/voicecom/gortsplib/v4/pkg/base"
+	"github.com/voicecom/gortsplib/v4/pkg/bytecounter"
+	"github.com/voicecom/gortsplib/v4/pkg/conn"
+	"github.com/voicecom/gortsplib/v4/pkg/description"
+	"github.com/voicecom/gortsplib/v4/pkg/format"
+	"github.com/voicecom/gortsplib/v4/pkg/headers"
+	"github.com/voicecom/gortsplib/v4/pkg/liberrors"
+	"github.com/voicecom/gortsplib/v4/pkg/rtptime"
+	"github.com/voicecom/gortsplib/v4/pkg/sdp"
 )
 
 // convert an URL into an address, in particular:
@@ -483,6 +483,11 @@ func (c *Client) StartRecording(address string, desc *description.Session) error
 	}
 
 	return nil
+}
+
+// ForceClose cancels context and returns, doesn't wait for close signal
+func (c *Client) ForceClose(){
+	c.ctxCancel()
 }
 
 // Close closes all client resources and waits for them to close.

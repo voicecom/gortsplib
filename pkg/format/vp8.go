@@ -6,7 +6,7 @@ import (
 
 	"github.com/pion/rtp"
 
-	"github.com/bluenviron/gortsplib/v4/pkg/format/rtpvp8"
+	"github.com/voicecom/gortsplib/v4/pkg/format/rtpvp8"
 )
 
 // VP8 is the RTP format for the VP8 codec.
