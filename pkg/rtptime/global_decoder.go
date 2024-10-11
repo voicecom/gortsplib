@@ -38,6 +38,9 @@ func newGlobalDecoderTrackData(
 
 func (d *globalDecoderTrackData) decode(ts uint32) time.Duration {
 	diff := int32(ts - d.prev)
+	if diff < 0 {
+		diff *= -1
+	}
 	d.prev = ts
 	d.overall += time.Duration(diff)
 
