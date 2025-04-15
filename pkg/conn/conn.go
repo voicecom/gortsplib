@@ -31,13 +31,21 @@ func NewConn(rw io.ReadWriter) *Conn {
 
 // Read reads a Request, a Response or an Interleaved frame.
 func (c *Conn) Read() (interface{}, error) {
-	byts, err := c.br.Peek(2)
+	byts, err := c.br.Peek(4)
 	if err != nil {
 		return nil, err
 	}
 
 	if byts[0] == base.InterleavedFrameMagicByte {
 		return c.ReadInterleavedFrame()
+	}
+
+	if byts[0] == '\r' && byts[1] == '\n' && byts[2] == 'R' && byts[3] == 'T' {
+		_, err := c.br.Discard(2)
+		if err != nil {
+			return nil, err
+		}
+		return c.ReadResponse()
 	}
 
 	if byts[0] == 'R' && byts[1] == 'T' {
